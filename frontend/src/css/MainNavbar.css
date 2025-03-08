@@ -1,0 +1,401 @@
+.main-navbar {
+  background: #ffffff;
+  box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+}
+
+.navbar-container {
+  max-width: 1400px;
+  margin: 0 auto;
+  padding: 0.5rem 1.5rem;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.navbar-brand {
+  display: flex;
+  align-items: center;
+  text-decoration: none;
+  padding: 0.5rem 1rem;
+  transition: all 0.3s ease;
+}
+
+.logo-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 40px;
+  height: 40px;
+  background: linear-gradient(45deg, #2196f3, #1976d2);
+  border-radius: 50%;
+  margin-right: 1rem;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+}
+
+.navbar-icon {
+  font-size: 1.8rem;
+  color: white;
+  filter: drop-shadow(0 2px 3px rgba(0, 0, 0, 0.2));
+}
+
+.brand-text {
+  font-size: 1.2rem;
+  font-weight: 600;
+}
+
+.navbar-menu {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+
+.menu-item {
+  position: relative;
+}
+
+.menu-button, .menu-link {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  padding: 0.5rem 0.75rem;
+  color: #455a64;
+  background: none;
+  border: none;
+  border-radius: 8px;
+  font-size: 0.9rem;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.menu-button svg, .menu-link svg {
+  font-size: 1.2rem;
+  color: #1976d2;
+}
+
+.menu-button:hover, .menu-link:hover {
+  background: #e3f2fd;
+  color: #1976d2;
+  text-decoration: none;
+}
+
+.menu-button.active, .menu-link.active {
+  background: #1976d2;
+  color: white;
+}
+
+.menu-button.active svg, .menu-link.active svg {
+  color: white;
+}
+
+.dropdown-arrow {
+  font-size: 0.8rem;
+  transition: transform 0.3s ease;
+}
+
+.dropdown-arrow.active {
+  transform: rotate(180deg);
+}
+
+.submenu {
+  position: absolute;
+  top: 100%;
+  left: 0;
+  background: white;
+  min-width: 200px;
+  border-radius: 8px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+  opacity: 0;
+  visibility: hidden;
+  transform: translateY(10px);
+  transition: all 0.3s ease;
+}
+
+.submenu.active {
+  opacity: 1;
+  visibility: visible;
+  transform: translateY(0);
+}
+
+.submenu-item {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  padding: 0.5rem 0.75rem;
+  color: #455a64;
+  text-decoration: none;
+  transition: all 0.3s ease;
+  font-size: 0.9rem;
+}
+
+.submenu-item svg {
+  font-size: 1rem;
+  color: #1976d2;
+  min-width: 20px;
+}
+
+.submenu-item:hover {
+  background: #e3f2fd;
+  color: #1976d2;
+  text-decoration: none;
+}
+
+.submenu-item:hover svg {
+  transform: translateX(2px);
+}
+
+.submenu-item.active {
+  background: #1976d2;
+  color: white;
+  pointer-events: none;
+}
+
+.submenu-item.active svg {
+  color: white;
+}
+
+.navbar-user {
+  margin-left: 1rem;
+}
+
+.user-profile {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  background: #f5f5f5;
+  padding: 0.4rem;
+  border-radius: 8px;
+  transition: all 0.3s ease;
+}
+
+.user-profile:hover {
+  background: #e3f2fd;
+}
+
+.user-info {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.user-avatar {
+  width: 28px;
+  height: 28px;
+  background: #1976d2;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: white;
+  font-size: 0.8rem;
+}
+
+.user-details {
+  display: flex;
+  flex-direction: column;
+}
+
+.user-name {
+  font-weight: 600;
+  color: #1976d2;
+  font-size: 0.85rem;
+  line-height: 1.2;
+}
+
+.user-badge {
+  font-size: 0.65rem;
+  font-weight: 500;
+  color: #666;
+  text-transform: uppercase;
+}
+
+.user-badge[data-role="ADMIN"] {
+  color: #1976d2;
+}
+
+.user-badge[data-role="USER"] {
+  color: #4caf50;
+}
+
+.logout-btn {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  padding: 0.4rem 0.8rem;
+  background: #ff5252;
+  color: white;
+  border: none;
+  border-radius: 6px;
+  font-size: 0.8rem;
+  font-weight: 500;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.logout-btn:hover {
+  background: #d32f2f;
+  transform: translateY(-1px);
+}
+
+.logout-text {
+  display: inline-block;
+}
+
+.logout-icon {
+  font-size: 0.9rem;
+}
+
+.mobile-toggle {
+  display: none;
+  background: none;
+  border: none;
+  font-size: 1.5rem;
+  color: #1976d2;
+  cursor: pointer;
+  padding: 0.5rem;
+}
+
+@media (max-width: 1024px) {
+  .navbar-container {
+    padding: 0.5rem 1rem;
+  }
+
+  .mobile-toggle {
+    display: block;
+  }
+
+  .navbar-menu {
+    position: fixed;
+    top: 60px;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: white;
+    flex-direction: column;
+    align-items: stretch;
+    padding: 1rem;
+    gap: 0.5rem;
+    transform: translateX(-100%);
+    transition: transform 0.3s ease;
+    overflow-y: auto;
+  }
+
+  .navbar-menu.active {
+    transform: translateX(0);
+  }
+
+  .menu-item {
+    width: 100%;
+  }
+
+  .menu-button, .menu-link {
+    width: 100%;
+    justify-content: space-between;
+  }
+
+  .submenu {
+    position: static;
+    box-shadow: none;
+    opacity: 1;
+    visibility: visible;
+    transform: none;
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.3s ease;
+  }
+
+  .submenu.active {
+    max-height: 500px;
+  }
+
+  .navbar-user {
+    margin: 1rem 0 0;
+    padding: 1rem 0 0;
+    border-left: none;
+    border-top: 1px solid rgba(0, 0, 0, 0.1);
+  }
+
+  .user-profile {
+    width: 100%;
+    justify-content: space-between;
+    padding: 0.5rem 0.75rem;
+  }
+
+  .logout-btn {
+    padding: 0.4rem 0.6rem;
+  }
+}
+
+@media (max-width: 768px) {
+  .user-profile {
+    width: 100%;
+    justify-content: space-between;
+    padding: 0.5rem 0.75rem;
+  }
+
+  .logout-btn {
+    padding: 0.4rem 0.6rem;
+  }
+
+  .logo-container {
+    width: 35px;
+    height: 35px;
+  }
+
+  .navbar-icon {
+    font-size: 1.5rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .brand-text {
+    display: none;
+  }
+
+  .navbar-container {
+    padding: 0.5rem 1rem;
+  }
+
+  .user-profile {
+    padding: 0.4rem;
+  }
+
+  .user-avatar {
+    width: 24px;
+    height: 24px;
+  }
+
+  .user-name {
+    font-size: 0.75rem;
+  }
+
+  .user-badge {
+    font-size: 0.6rem;
+  }
+
+  .logout-text {
+    display: none;
+  }
+
+  .logout-btn {
+    padding: 0.4rem;
+    border-radius: 50%;
+    aspect-ratio: 1;
+  }
+}
+
+.navbar-brand:hover .logo-container {
+  transform: scale(1.05);
+  box-shadow: 0 3px 7px rgba(0, 0, 0, 0.3);
+}
+
+.navbar-brand:hover .navbar-icon {
+  animation: bounce 0.5s ease;
+}
+
+@keyframes bounce {
+  0%, 100% { transform: translateY(0); }
+  50% { transform: translateY(-3px); }
+} 

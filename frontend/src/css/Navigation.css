@@ -1,0 +1,342 @@
+.main-nav {
+    background: #ffffff;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+}
+
+.nav-container {
+    max-width: 1400px;
+    margin: 0 auto;
+    padding: 0.75rem 2rem;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.nav-brand {
+    text-decoration: none;
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+}
+
+.nav-logo {
+    height: 40px;
+    width: auto;
+}
+
+.brand-text {
+    font-size: 1.5rem;
+    font-weight: 700;
+    color: #1976d2;
+    display: inline-block;
+}
+
+.nav-menu {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+}
+
+.nav-link {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    color: #455a64;
+    text-decoration: none;
+    padding: 0.75rem 1rem;
+    border-radius: 8px;
+    transition: all 0.3s ease;
+    font-weight: 500;
+}
+
+.nav-link svg {
+    font-size: 1.2rem;
+    color: #1976d2;
+}
+
+.nav-link:hover {
+    background: #e3f2fd;
+    color: #1976d2;
+    transform: none;
+    text-decoration: none;
+}
+
+.nav-link.active {
+    background: #1976d2;
+    color: white;
+    pointer-events: none;
+}
+
+.nav-link.active svg {
+    color: white;
+}
+
+.nav-toggle {
+    display: none;
+    flex-direction: column;
+    gap: 6px;
+    background: none;
+    border: none;
+    cursor: pointer;
+    padding: 4px;
+}
+
+.nav-toggle span {
+    display: block;
+    width: 25px;
+    height: 2px;
+    background: #1976d2;
+    transition: all 0.3s ease;
+}
+
+.nav-dropdown {
+    position: relative;
+}
+
+.nav-dropdown-toggle {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    padding: 0.75rem 1rem;
+    background: none;
+    border: none;
+    color: #455a64;
+    font-weight: 500;
+    cursor: pointer;
+    border-radius: 8px;
+    transition: all 0.3s ease;
+}
+
+.nav-dropdown-toggle:hover {
+    background: #e3f2fd;
+    color: #1976d2;
+}
+
+.dropdown-arrow {
+    font-size: 0.8rem;
+    transition: transform 0.3s ease;
+}
+
+.dropdown-arrow.active {
+    transform: rotate(180deg);
+}
+
+.nav-dropdown-menu {
+    position: absolute;
+    top: 100%;
+    left: 0;
+    background: white;
+    border-radius: 8px;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+    min-width: 200px;
+    z-index: 1000;
+    display: none;
+}
+
+.nav-dropdown-menu.active {
+    display: block;
+}
+
+.nav-dropdown-item {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    padding: 0.75rem 1rem;
+    color: #455a64;
+    text-decoration: none;
+    transition: all 0.3s ease;
+}
+
+.nav-dropdown-item:hover {
+    background: #e3f2fd;
+    color: #1976d2;
+}
+
+@media (max-width: 1024px) {
+    .nav-container {
+        padding: 0.5rem 1rem;
+    }
+
+    .nav-toggle {
+        display: flex;
+        background: #f5f5f5;
+        padding: 0.5rem;
+        border-radius: 8px;
+        transition: background-color 0.3s ease;
+    }
+
+    .nav-toggle:hover {
+        background: #e3f2fd;
+    }
+
+    .nav-menu {
+        display: none;
+        position: fixed;
+        top: 60px; /* Altura del navbar */
+        left: 0;
+        right: 0;
+        bottom: 0;
+        background: white;
+        flex-direction: column;
+        padding: 1rem;
+        box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+        border-top: 2px solid #f0f0f0;
+        overflow-y: auto;
+        z-index: 1000;
+    }
+
+    .nav-menu.active {
+        display: flex;
+    }
+
+    .nav-dropdown {
+        width: 100%;
+        border-bottom: 1px solid #f0f0f0;
+    }
+
+    .nav-dropdown:last-child {
+        border-bottom: none;
+    }
+
+    .nav-dropdown-toggle {
+        width: 100%;
+        justify-content: space-between;
+        padding: 1rem;
+        font-size: 1.1rem;
+    }
+
+    .nav-dropdown-toggle:hover {
+        background: transparent;
+    }
+
+    .nav-dropdown-menu {
+        position: static;
+        box-shadow: none;
+        min-width: auto;
+    }
+
+    .nav-dropdown-item {
+        padding: 0.75rem 1.5rem;
+        font-size: 1rem;
+        border-radius: 4px;
+        margin: 0.25rem 1rem;
+    }
+
+    .nav-dropdown-item:hover {
+        background: #e3f2fd;
+    }
+
+    .dropdown-arrow {
+        font-size: 1rem;
+    }
+
+    /* Mejoras para el UserInfo en móvil */
+    .user-info {
+        margin: 1rem 0 0 0;
+        padding: 1rem 0 0 0;
+        border-top: 2px solid #f0f0f0;
+        border-left: none;
+        width: 100%;
+        flex-direction: column;
+        gap: 1rem;
+    }
+
+    .user-details {
+        width: 100%;
+        justify-content: center;
+    }
+
+    .logout-button {
+        width: 100%;
+        justify-content: center;
+        padding: 0.75rem;
+    }
+
+    /* Animación mejorada para el botón toggle */
+    .nav-toggle span {
+        width: 22px;
+        height: 2px;
+        background: #1976d2;
+        transition: all 0.3s ease;
+    }
+
+    .nav-toggle.active span:nth-child(1) {
+        transform: rotate(45deg) translate(5px, 5px);
+    }
+
+    .nav-toggle.active span:nth-child(2) {
+        opacity: 0;
+        transform: translateX(-10px);
+    }
+
+    .nav-toggle.active span:nth-child(3) {
+        transform: rotate(-45deg) translate(5px, -5px);
+    }
+
+    /* Ajustes para el logo en móvil */
+    .nav-logo {
+        height: 35px;
+    }
+
+    /* Efecto de overlay cuando el menú está abierto */
+    .app-container::before {
+        content: '';
+        position: fixed;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        background: rgba(0, 0, 0, 0.5);
+        opacity: 0;
+        visibility: hidden;
+        transition: all 0.3s ease;
+        z-index: 999;
+    }
+
+    .nav-menu.active + .app-container::before {
+        opacity: 1;
+        visibility: visible;
+    }
+}
+
+/* Ajustes adicionales para pantallas muy pequeñas */
+@media (max-width: 380px) {
+    .nav-container {
+        padding: 0.5rem;
+    }
+
+    .nav-dropdown-toggle {
+        font-size: 1rem;
+        padding: 0.75rem;
+    }
+
+    .nav-dropdown-item {
+        padding: 0.75rem 1rem;
+        margin: 0.25rem 0.5rem;
+    }
+
+    .user-details {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .username, .role {
+        text-align: center;
+    }
+}
+
+@media (max-width: 768px) {
+    .nav-menu {
+        flex-direction: column;
+        align-items: stretch;
+    }
+    
+    .nav-dropdown-menu {
+        position: static;
+        box-shadow: none;
+        min-width: auto;
+    }
+}

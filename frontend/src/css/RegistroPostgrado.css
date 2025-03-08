@@ -1,0 +1,449 @@
+.registro-postgrado-container {
+    max-width: 1200px;
+    margin: 2rem auto;
+    padding: 2rem;
+    background-color: #ffffff;
+    border-radius: 12px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.registro-header {
+    margin-bottom: 2rem;
+    text-align: center;
+}
+
+.registro-title {
+    color: #1976d2;
+    font-size: 2rem;
+    font-weight: 600;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 1rem;
+}
+
+.title-icon {
+    font-size: 2rem;
+    color: #1976d2;
+}
+
+/* Search Section Styles */
+.search-section {
+    background-color: #f8f9fa;
+    padding: 1.5rem;
+    border-radius: 12px;
+    margin-bottom: 2rem;
+    border: 1px solid #e0e0e0;
+}
+
+.search-container {
+    margin-bottom: 1rem;
+}
+
+.search-group {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}
+
+.search-input-wrapper {
+    position: relative;
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    width: 100%;
+}
+
+.search-icon {
+    position: absolute;
+    left: 1rem;
+    color: #1976d2;
+    font-size: 1.2rem;
+}
+
+.search-input {
+    width: 100%;
+    padding: 0.75rem 1rem 0.75rem 3rem;
+    border: 1px solid #e0e0e0;
+    border-radius: 8px;
+    font-size: 1rem;
+    transition: all 0.3s ease;
+}
+
+.search-input:focus {
+    border-color: #1976d2;
+    box-shadow: 0 0 0 2px rgba(25, 118, 210, 0.2);
+    outline: none;
+}
+
+.search-button {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    padding: 0.75rem 1.5rem;
+    background: #1976d2;
+    border: none;
+    border-radius: 8px;
+    color: white;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    white-space: nowrap;
+}
+
+.search-button:hover {
+    background: #1565c0;
+}
+
+.search-button:disabled {
+    background-color: #90caf9;
+    cursor: not-allowed;
+}
+
+/* Message Styles */
+.message {
+    display: flex;
+    align-items: center;
+    gap: 0.75rem;
+    padding: 1rem;
+    border-radius: 8px;
+    margin-bottom: 1.5rem;
+    font-weight: 500;
+}
+
+.message.error {
+    background: #ffebee;
+    color: #c62828;
+    border: 1px solid #ef9a9a;
+}
+
+.message.success {
+    background: #e8f5e9;
+    color: #2e7d32;
+    border: 1px solid #a5d6a7;
+}
+
+.message .icon {
+    font-size: 1.2rem;
+}
+
+/* Persona Encontrada Styles */
+.persona-encontrada {
+    background-color: #e3f2fd;
+    padding: 1.5rem;
+    border-radius: 8px;
+    margin-top: 1rem;
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    border: 1px solid #90caf9;
+}
+
+.persona-encontrada .icon {
+    font-size: 2rem;
+    color: #1976d2;
+}
+
+.persona-info h4 {
+    margin: 0;
+    color: #1976d2;
+    font-size: 1.2rem;
+}
+
+.persona-info p {
+    margin: 0.5rem 0 0;
+    color: #546e7a;
+}
+
+/* Postgrado Form Styles */
+.postgrado-form {
+    background-color: #ffffff;
+    padding: 2rem;
+    border-radius: 12px;
+    margin-bottom: 2rem;
+    border: 1px solid #e0e0e0;
+}
+
+.form-row {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 1rem;
+    margin-bottom: 1rem;
+}
+
+.form-group {
+    flex: 1;
+    margin-bottom: 1.5rem;
+}
+
+.input-wrapper {
+    position: relative;
+    display: flex;
+    align-items: center;
+    margin-top: 0.25rem;
+}
+
+.input-icon {
+    position: absolute;
+    left: 1rem;
+    color: #1976d2;
+    font-size: 1.2rem;
+}
+
+.form-input {
+    width: 100%;
+    padding: 0.75rem 1rem 0.75rem 3rem;
+    border: 1px solid #e0e0e0;
+    border-radius: 8px;
+    font-size: 1rem;
+    transition: all 0.3s ease;
+}
+
+.form-input:focus {
+    border-color: #1976d2;
+    box-shadow: 0 0 0 2px rgba(25, 118, 210, 0.2);
+    outline: none;
+}
+
+.form-label {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    margin-bottom: 0.5rem;
+    color: #1976d2;
+    font-weight: 500;
+    font-size: 0.9rem;
+}
+
+.label-icon {
+    font-size: 1rem;
+    color: #1976d2;
+}
+
+/* Form Buttons */
+.form-buttons {
+    display: flex;
+    justify-content: flex-end;
+    margin-top: 2rem;
+}
+
+.submit-button {
+    display: flex;
+    align-items: center;
+    gap: 0.75rem;
+    padding: 1rem 2rem;
+    background-color: #1976d2;
+    color: white;
+    border: none;
+    border-radius: 8px;
+    font-weight: 500;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.submit-button:hover {
+    background-color: #1565c0;
+}
+
+.submit-button:disabled {
+    background-color: #90caf9;
+    cursor: not-allowed;
+}
+
+/* Loading Spinner */
+.loading-spinner {
+    width: 1.2rem;
+    height: 1.2rem;
+    border: 2px solid #ffffff;
+    border-top-color: transparent;
+    border-radius: 50%;
+    animation: spin 0.8s linear infinite;
+}
+
+@keyframes spin {
+    to {
+        transform: rotate(360deg);
+    }
+}
+
+.spin {
+    animation: spin 1s linear infinite;
+}
+
+/* Responsive Styles */
+@media (max-width: 768px) {
+    .registro-postgrado-container {
+        margin: 1rem;
+        padding: 1rem;
+    }
+
+    .search-group {
+        flex-direction: column;
+    }
+
+    .search-input-wrapper {
+        flex-direction: column;
+    }
+
+    .search-button {
+        width: 100%;
+        justify-content: center;
+    }
+
+    .form-row {
+        grid-template-columns: 1fr;
+    }
+
+    .form-buttons {
+        flex-direction: column;
+    }
+
+    .submit-button {
+        width: 100%;
+        justify-content: center;
+    }
+
+    .form-label {
+        font-size: 0.85rem;
+    }
+}
+
+/* Scrollbar Styles */
+::-webkit-scrollbar {
+    width: 8px;
+    height: 8px;
+}
+
+::-webkit-scrollbar-track {
+    background: #f1f1f1;
+    border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb {
+    background: #90caf9;
+    border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background: #1976d2;
+}
+
+/* Mantener estilos existentes y agregar: */
+
+.postgrados-section {
+    margin-top: 2rem;
+    background: white;
+    border-radius: 12px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    padding: 1.5rem;
+}
+
+.table-container {
+    overflow-x: auto;
+    margin-top: 1rem;
+}
+
+.registros-table {
+    width: 100%;
+    border-collapse: collapse;
+    min-width: 800px;
+}
+
+.registros-table th,
+.registros-table td {
+    padding: 1rem;
+    text-align: left;
+    border-bottom: 1px solid #e0e0e0;
+}
+
+.registros-table th {
+    background: #f5f5f5;
+    font-weight: 600;
+    color: #455a64;
+}
+
+.registros-table tr:hover {
+    background: #f8f9fa;
+}
+
+.action-buttons {
+    display: flex;
+    gap: 0.5rem;
+}
+
+.edit-button,
+.delete-button {
+    display: flex;
+    align-items: center;
+    gap: 0.25rem;
+    padding: 0.5rem 0.75rem;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 0.875rem;
+    transition: all 0.3s ease;
+}
+
+.edit-button {
+    background: #1976d2;
+    color: white;
+}
+
+.edit-button:hover {
+    background: #1565c0;
+}
+
+.delete-button {
+    background: #dc3545;
+    color: white;
+}
+
+.delete-button:hover {
+    background: #c82333;
+}
+
+/* Estilos para el modo de edición */
+.form-section.editing {
+    border: 2px solid #1976d2;
+}
+
+.section-title .icon {
+    margin-right: 0.5rem;
+}
+
+/* Agregar estos estilos */
+
+.persona-info {
+    background: #e3f2fd;
+    padding: 1rem;
+    border-radius: 8px;
+    margin: 1rem 0;
+    border-left: 4px solid #1976d2;
+}
+
+.persona-info h3 {
+    color: #1976d2;
+    margin-bottom: 0.5rem;
+    font-size: 1.1rem;
+}
+
+.persona-info p {
+    margin: 0;
+    line-height: 1.5;
+}
+
+.form-section.editing {
+    border: 2px solid #1976d2;
+    background-color: #fafafa;
+}
+
+.section-title {
+    display: flex;
+    align-items: center;
+    color: #1976d2;
+    margin-bottom: 1.5rem;
+}
+
+.section-title .icon {
+    margin-right: 0.5rem;
+    font-size: 1.2rem;
+}
